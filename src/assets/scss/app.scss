@@ -1,0 +1,52 @@
+button:not(:disabled) {
+  cursor: pointer;
+}
+:root {
+  --shade: rgba(18, 31, 68, 0.05);
+  --surface-variant: oklch(98.5% 0 0);
+}
+.dark {
+  --shade: rgba(255, 255, 255, 0.1);
+  --surface-variant: oklch(26.9% 0 0);
+}
+
+
+
+// gradient button
+.gradient-border {
+  -webkit-backdrop-filter:blur(10px);
+  backdrop-filter:blur(10px);
+  border-radius:.5rem;
+  position:relative
+}
+.gradient-border:before {
+  background:linear-gradient(90deg,#e2e2e2,#e2e2e2 25%,oklch(91.017% 0.14939 96.607) 50%,oklch(82.559% 0.06462 2.5963) 75%,oklch(55.867% 0.18041 11.2));
+}
+
+.gradient-border-dark:before {
+  background:linear-gradient(90deg,#303030,#303030 25%,oklch(91.017% 0.14939 96.607) 50%,oklch(82.559% 0.06462 2.5963) 75%,oklch(55.867% 0.18041 11.2));
+}
+.gradient-border:before {
+  background-size:350% auto;
+  border-radius:1rem;
+  bottom:0;
+  content:"";
+  left:0;
+  -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+  mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+  -webkit-mask-composite:xor;
+  mask-composite:exclude;
+  opacity:.75;
+  padding:2px;
+  position:absolute;
+  right:0;
+  top:0;
+  transition:background-position .3s ease-in-out,opacity .2s ease-in-out;
+  width:100%
+}
+.gradient-border:hover:before {
+  background-position:-50% 0;
+  opacity:1
+}
+
+.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}

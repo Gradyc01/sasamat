@@ -1,0 +1,39 @@
+// these are breakpoints based on Tailwind CSS
+// It need to be imported in defineNuxtConfig
+@use 'sass:map';
+@use 'sass:math';
+// $breakpoints: (
+//   xs: 30em,
+//   sm: 40em,
+//   md: 48rem,
+//   lg: 64rem,
+//   xl: 80rem,
+//   2xl: 96rem,
+// );
+$breakpoints: (
+  xs: 480px,
+  sm: 640px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px,
+  2xl: 1536px,
+);
+
+@mixin screen($name) {
+  $size: map.get($breakpoints, $name);
+  @if $size {
+    @media (min-width: $size) {
+      @content;
+    }
+  }
+}
+
+@mixin screenMax($name) {
+  $size: map.get($breakpoints, $name);
+  @if $size {
+    $max: math.div($size, 1px) - 1;
+    @media (max-width: #{$max}px) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,203 @@
+@import 'tailwindcss';
+@import './fonts.scss';
+
+:root {
+  --ui-primary: var(--ui-color-primary-500);
+  --ui-secondary: var(--ui-color-secondary-500);
+  --ui-success: var(--ui-color-success-500);
+  --ui-info: var(--ui-color-info-500);
+  --ui-warning: var(--ui-color-warning-500);
+  --ui-error: var(--ui-color-error-500);
+  --logo-height: 30px;
+  --body-height: calc(100dvh - var(--nav-height));
+  --body-height-exclude-footer: calc(var(--body-height) - 280px);
+}
+
+.dark {
+  --ui-primary: var(--ui-color-primary-400);
+  --ui-secondary: var(--ui-color-secondary-400);
+  --ui-success: var(--ui-color-success-400);
+  --ui-info: var(--ui-color-info-400);
+  --ui-warning: var(--ui-color-warning-400);
+  --ui-error: var(--ui-color-error-400);
+}
+
+@layer utilities {
+  .font-regola {
+    font-family: 'FTRegolaNeue', sans-serif;
+  }
+  .font-regola-bold {
+    font-family: 'FTRegolaNeue Bold', sans-serif;
+  }
+  .font-regola-semibold {
+    font-family: 'FTRegolaNeue Semibold', sans-serif;
+  }
+  .font-bold {
+    font-family: 'FTRegolaNeue Bold', sans-serif;
+  }
+  .font-semibold {
+    font-family: 'FTRegolaNeue Semibold', sans-serif;
+  }
+
+  :root {
+    --nav-height: 96px;
+  }
+
+  @media (max-width: 768px) {
+    :root {
+      --nav-height: 64px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    :root {
+      --nav-height: 64px;
+    }
+  }
+}
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: 'FTRegolaNeue', 'Montserrat', Arial, Helvetica, sans-serif;
+  letter-spacing: 0;
+  font-size: 14px;
+  position: relative;
+  overflow-x: hidden;
+  color: #202020 !important;
+}
+
+input,
+textarea {
+  font-size: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal !important;
+}
+
+/* input:focus,
+input:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+} */
+
+/* 更改主题颜色 */
+@theme static {
+  --font-sans: 'FTRegolaNeue', 'Montserrat', Arial, Helvetica, sans-serif;
+  /* --color-bravo-50: #ffffff;
+  --color-bravo-100: #ffffff;
+  --color-bravo-200: #ffffff;
+  --color-bravo-300: #ffffff;
+  --color-bravo-400: #ffffff;
+  --color-bravo-500: #000000;
+  --color-bravo-600: #000000;
+  --color-bravo-700: #000000;
+  --color-bravo-800: #000000;
+  --color-bravo-900: #000000;
+  --color-bravo-950: #000000; */
+  --color-bravo: oklch(20.463% 0 none);
+  --color-bravo-50: oklch(70.9% 0 none);
+  --color-bravo-100: oklch(65.666% 0 none);
+  --color-bravo-200: oklch(55.553% 0 none);
+  --color-bravo-300: oklch(44.59% 0 none);
+  --color-bravo-400: oklch(33.289% 0 none);
+  --color-bravo-500: oklch(20.463% 0 none);
+  --color-bravo-600: oklch(16.842% 0 none);
+  --color-bravo-700: oklch(13.441% 0 none);
+  --color-bravo-800: oklch(0% 0 none);
+  --color-bravo-900: oklch(0% 0 none);
+  --color-bravo-950: oklch(0% 0 none);
+
+  --color-primary: #202020;
+
+  --color-secondary: oklch(55.867% 0.18041 11.2);
+  --color-secondary-50: oklch(86.258% 0.04934 2.2047);
+  --color-secondary-100: oklch(82.559% 0.06462 2.5963);
+  --color-secondary-200: oklch(74.998% 0.09659 3.7862);
+  --color-secondary-300: oklch(67.957% 0.12824 5.2929);
+  --color-secondary-400: oklch(61.459% 0.15857 7.5687);
+  --color-secondary-500: oklch(55.867% 0.18041 11.2);
+  --color-secondary-600: oklch(46.627% 0.14764 10.954);
+  --color-secondary-700: oklch(36.918% 0.11279 10.567);
+  --color-secondary-800: oklch(26.593% 0.0748 8.561);
+  --color-secondary-900: oklch(15.174% 0.0308 3.8249);
+  --color-secondary-950: oklch(0% 0 none);
+
+  --color-yolk: oklch(91.017% 0.14939 96.607);
+  --color-yolk-50: oklch(100% 0 none);
+  --color-yolk-100: oklch(100% 0 none);
+  --color-yolk-200: oklch(97.682% 0.03977 96.225);
+  --color-yolk-300: oklch(95.234% 0.08156 96.323);
+  --color-yolk-400: oklch(93.097% 0.11886 97.329);
+  --color-yolk-500: oklch(91.017% 0.14939 96.607);
+  --color-yolk-600: oklch(88.468% 0.17377 94.478);
+  --color-yolk-700: oklch(82.468% 0.16865 92.543);
+  --color-yolk-800: oklch(67.718% 0.13844 92.868);
+  --color-yolk-900: oklch(51.774% 0.10572 93.29);
+  --color-yolk-950: oklch(43.337% 0.08834 93.645);
+
+  --shadow-full-2xs: 0 0 1px rgb(0 0 0 / 0.05);
+  --shadow-full-xs: 0 0 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-full-sm: 0 0 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-full-md: 0 2px 6px -1px rgb(0 0 0 / 0.1),
+    0 1px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-full: 0 2px 6px -1px rgb(0 0 0 / 0.1),
+    0 1px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-full-lg: 0 0 15px -2px rgb(0 0 0 / 0.1),
+    0 1px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-full-xl: 0 0 26px -4px rgb(0 0 0 / 0.1),
+    0 0 10px -4px rgb(0 0 0 / 0.1);
+  --shadow-full-2xl: 0 10px 50px -12px rgb(0 0 0 / 0.25);
+
+  --breakpoint-xs: 25rem;
+  --breakpoint-xs: 30rem;
+  --breakpoint-2xl: 100rem;
+  --breakpoint-3xl: 120rem;
+}
+
+.docs {
+  @apply max-w-4xl mx-auto p-4 text-base;
+}
+
+.docs ul {
+  @apply list-disc pl-6 space-y-1;
+}
+
+.docs li {
+  @apply leading-relaxed;
+}
+
+.docs a {
+  @apply text-blue-500 underline;
+}
+
+.docs h1 {
+  @apply text-4xl font-bold leading-tight mt-6 mb-3;
+}
+.docs h2 {
+  @apply text-3xl font-semibold leading-snug mt-6 mb-3;
+}
+.docs h3 {
+  @apply text-2xl font-semibold mt-5 mb-2;
+}
+.docs h4 {
+  @apply text-xl font-medium mt-5 mb-2;
+}
+.docs h5 {
+  @apply text-lg font-medium mt-4 mb-1;
+}
+.docs h6 {
+  @apply text-base font-medium mt-4 mb-1;
+}
+
+@custom-variant glow {
+  &:where(.glow-capture [glow] &) {
+    @slot;
+  }
+}
