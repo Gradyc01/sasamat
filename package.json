@@ -1,8 +1,8 @@
 {
-  "name": "grady",
+  "name": "sasamat",
   "private": true,
   "version": "0.0.0",
-  "homepage":"https://gradyc01.github.io/grady/",
+  "homepage":"https://gradyc01.github.io/sasamat/",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
