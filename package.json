@@ -2,7 +2,7 @@
   "name": "sasamat",
   "private": true,
   "version": "0.0.0",
-  "homepage":"https://gradyc01.github.io/sasamat/",
+  "homepage":"https://3638onwest3rd.ca/",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
