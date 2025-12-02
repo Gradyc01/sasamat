@@ -8,7 +8,7 @@ function App() {
     <div className="">
       <HashRouter>
         <Routes>
-          {/* Default (redirect or 404) */}
+          <Route path="/" element={<MainPage />} />
           <Route path="*" element={<MainPage />} />
         </Routes>
       </HashRouter>
