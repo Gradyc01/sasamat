@@ -1,0 +1,50 @@
+/* Main image container */
+
+.thumb-hidden {
+  display: none;
+}
+/* .image-gallery-slide img {
+  width: 1000px !important;
+  height: 600px !important;
+  object-fit: cover;
+} */
+
+/* Thumbnail images */
+/* .image-gallery-thumbnails .image-gallery-thumbnail img {
+  width: 100px !important;
+  height: 70px !important;
+  object-fit: cover;
+} */
+
+/* Optional: center the image */
+/* .image-gallery-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+/* Make arrows position relative to the viewport */
+/* .image-gallery-left-nav,
+.image-gallery-right-nav {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+} */
+
+/* Left arrow on far left */
+/* .image-gallery-left-nav {
+  left: 20px;
+} */
+
+/* Right arrow on far right */
+/* .image-gallery-right-nav {
+  right: 20px;
+} */
+
+/* Optional: make them easier to see */
+/* .image-gallery-left-nav .image-gallery-svg,
+.image-gallery-right-nav .image-gallery-svg {
+  height: 50px;
+  width: 50px;
+} */
