@@ -1,6 +1,7 @@
 import { Mail } from "lucide-react";
 import { motion } from "motion/react";
 import ImageGallery from "../components/ImageGallery";
+import ArticleText from "../components/ArticleText";
 
 const MainPage: React.FC = () => {
 
@@ -13,7 +14,7 @@ const MainPage: React.FC = () => {
             >
                 <img
                     src="/images/3638_main_image.png"
-                    loading="lazy"
+                    loading="eager"
                     className="absolute w-full object-cover h-screen brightness-15 opacity-90"
                     alt="Background Image"
                 />
@@ -36,10 +37,40 @@ const MainPage: React.FC = () => {
                 </div>
             </section> 
         </div>
-        <div className="flex max-w-7xl w-full h-full justify-center">
+        <div className="flex max-w-7xl w-full h-full justify-center flex-col gap-8">
             <section className="flex flex-col justify-center items-center w-full px-2">
                 <ImageGallery />
             </section>
+            <section className="flex flex-col justify-center items-center w-full px-2 gap-6">
+                <ArticleText 
+                    title="Property Details"
+                    image="/images/3638_main_image.png"
+                    secondaryTitle="Property Layout"
+                    description="Three bedrooms and three and a half bathrooms"
+                    thirdTitle="Key Benefits:"
+                    finalDescription="Modern living in this brand new duplex, carefully designed for today’s lifestyle. This home combines the privacy and contemporary elegance in one exceptional package."
+                    linkSrc="property-details"
+                />
+                <ArticleText 
+                    title="Area Benefits"
+                    image="/images/house-images/happy-people.png"
+                    secondaryTitle="Area Benefits"
+                    description="Coastal Calm meets urban family ease"
+                    thirdTitle="A Lifestyle Like No Other:"
+                    finalDescription="Nestled in the heart of Kitsilano. Residents enjoy immediate access to one of Vancouver’s premier waterfront. With nearby trails, tennis courts, and the vibrant 4th Avenue community moments away, this location delivers coastal serenity and urban convenience in one of the city’s most wanted neighborhoods"
+                />
+                <ArticleText 
+                    title="Contact Us"
+                    image="/images/house-images/interior-29.png"
+                    secondaryTitle="Contact us"
+                    description="Jericho Beach Vista"
+                    thirdTitle="Booking:"
+                    finalDescription="To enquire about our properties, please use the online contact form  call us or email us by clicking the button below"
+                    linkSrc="contact-us"
+                    buttonName="Contact Us"
+                />
+            </section>
+
         </div>
     </div>
   );
