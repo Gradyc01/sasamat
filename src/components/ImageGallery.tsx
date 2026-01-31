@@ -164,7 +164,7 @@ const renderItem = (item: any) => {
       <div className='w-full max-w-[1000px] aspect-video max-h-[600px] flex justify-center items-center '>
         <iframe
         className="w-[90vw] aspect-video object-contain"
-        src="https://www.youtube.com/embed/dRmPgK_e4ss?si=LWJ8kYdq58FZoLl_"
+        src="https://www.youtube.com/embed/ZfdmKpj2vkg?si=k7jHEFUXWKGlm2dX"
         title="YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen

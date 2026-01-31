@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 interface Props {
     title: string;
@@ -55,9 +56,9 @@ const ArticleText: React.FC<Props> = ({
                     </div>
                     <div className='flex w-full items-center sm:items-end flex-col gap-4 cursor-pointer!'>
                         {linkSrc && (<div className='flex justify-center items-center bg-gray-50 border rounded-full w-30 h-11 hover:bg-primary duration-300 '>
-                            <a href="property-details" className='flex text-center text-lg font-regola-semibold duration-150 text-primary hover:text-white cursor-pointer!'>
+                            <Link to={linkSrc} className='flex text-center text-lg font-regola-semibold duration-150 text-primary hover:text-white cursor-pointer!'>
                                {button}
-                            </a>
+                            </Link>
                         </div>)}
                     </div>
                     

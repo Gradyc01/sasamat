@@ -7,7 +7,7 @@ const MainPage: React.FC = () => {
 
   return (
     <div className="flex flex-col justify-center items-center w-screen min-h-screen text-primary gap-8">
-        <div className="flex max-w-7xl w-full h-screen justify-center ">
+        <div className="flex max-w-7xl w-full h-[92vh] justify-center ">
             <div
                 data-framer-background-image-wrapper="true"
                 className="absolute inset-0 -z-10 overflow-hidden"
@@ -62,7 +62,7 @@ const MainPage: React.FC = () => {
                 <ArticleText 
                     title="Contact Us"
                     image="/images/house-images/interior-29.png"
-                    secondaryTitle="Contact us"
+                    secondaryTitle="Contact Us"
                     description="Jericho Beach Vista"
                     thirdTitle="Booking:"
                     finalDescription="To enquire about our properties, please use the online contact form  call us or email us by clicking the button below"
