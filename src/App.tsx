@@ -5,6 +5,7 @@ import PropertyLayout from "./pages/PropertyLayout";
 import MainLayout from "./layouts/MainLayout";
 import StockLayout from "./layouts/StockLayout";
 import ScrollToTop from "./components/ScrollToTop";
+import ContactUs from "./pages/ContactUs";
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
         </Route>
         <Route element={<StockLayout />}>
           <Route path="property-details" element={<PropertyLayout />} />
+          <Route path="contact-us" element={<ContactUs />} />
         </Route>
       </Routes>
       </HashRouter>
