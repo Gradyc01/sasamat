@@ -1,4 +1,5 @@
 import JotForm from "../components/JotForm";
+import { email, phone } from "../utils/globals";
 
 const ContactUs: React.FC = () => {
 
@@ -17,14 +18,14 @@ const ContactUs: React.FC = () => {
                         To enquire about our properties, please use the online contact form, call us or email us, we aim torespond within one day 
                     </p>
                     <p>
-                        You can reach us by phone at +1 (778) 239-9108 or using one of the online form to the side.
+                        You can reach us by phone at +1 {phone} or using one of the online form to the side.
                     </p>
                     <p>
-                        You can reach us by email at gradychen04@gmail.com
+                        You can reach us by email at {email}
                     </p>
                 </div>
             </section>
-            <section className="flex w-full sm:w-1/2 ">
+            <section className="flex w-full sm:w-5/11 ">
                 <JotForm/>
             </section>
         </div>

@@ -1,5 +1,11 @@
 import { useEffect } from 'react';
 
+declare global {
+  interface Window {
+    jotformEmbedHandler?: (selector: string, baseUrl: string) => void;
+  }
+}
+
 const JotForm = () => {
   useEffect(() => {
     // Load the JotForm embed handler dynamically
@@ -31,7 +37,7 @@ const JotForm = () => {
         title="New Customer Registration Form"
         onLoad={() => window.parent.scrollTo(0, 0)}
         allow="geolocation; microphone; camera; fullscreen; payment"
-        src="https://form.jotform.com/252647060829260"
+        src="https://form.jotform.com/260348966970269"
         style={{
           minWidth: '100%',
           maxWidth: '100%',

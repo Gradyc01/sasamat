@@ -13,8 +13,8 @@ const PropertyDetails: React.FC = () => {
     return (
         <>
             <div className="flex flex-col w-full gap-4 h-full items-center p-1">
-                <section className="flex max-w-[600px] gap-4 object-contain">
-                    {images.map((src, index) => {
+                <section className="flex max-w-[600px]">
+                    {images.map((src) => {
                         return (
                             <img
                                 key={src}
@@ -39,7 +39,7 @@ const PropertyDetails: React.FC = () => {
                     {/* Close button */}
                     <button
                         onClick={() => setFullscreenImage(null)}
-                        className="absolute top-6 right-6 text-white text-3xl font-bold hover:opacity-80"
+                        className="absolute sm:top-6 sm:right-6 text-red-700 text-3xl font-bold hover:opacity-80 "
                     >
                         ×
                     </button>

@@ -2,6 +2,7 @@ import { Mail } from "lucide-react";
 import { motion } from "motion/react";
 import ImageGallery from "../components/ImageGallery";
 import ArticleText from "../components/ArticleText";
+import { email } from "../utils/globals";
 
 const MainPage: React.FC = () => {
 
@@ -32,7 +33,7 @@ const MainPage: React.FC = () => {
                 </span>
                 <div className="flex flex-col gap-1 bg-linear-to-r from-gray-400 to-gray-300 bg-clip-text text-transparent items-center">
                     <p className="text-xl">3638 West 3rd Avenue</p>
-                    <a href="mailto:gradychen04@gmail.com" className="flex items-center gap-2">
+                    <a href={`mailto:${email}`} className="flex items-center gap-2">
                         <p className="text-lg">Email Us:</p>
                         <Mail color="#99a1af" size={30} />    
                     </a>
