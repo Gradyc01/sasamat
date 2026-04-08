@@ -25,7 +25,7 @@ const ContactUs: React.FC = () => {
                     </p>
                 </div>
             </section>
-            <section className="flex w-full sm:w-5/11 ">
+            <section className="flex w-9/10 sm:w-5/11 ">
                 <JotForm/>
             </section>
         </div>

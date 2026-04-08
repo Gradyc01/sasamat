@@ -39,7 +39,7 @@ const PropertyDetails: React.FC = () => {
                     {/* Close button */}
                     <button
                         onClick={() => setFullscreenImage(null)}
-                        className="absolute sm:top-6 sm:right-6 text-red-700 text-3xl font-bold hover:opacity-80 "
+                        className="absolute top-6 right-6 text-red-700 text-3xl font-bold hover:opacity-80 "
                     >
                         ×
                     </button>
